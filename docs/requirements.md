@@ -49,3 +49,15 @@ At the minimum, use Vue, JavaScript, HTML, and CSS to complete this assignment.
 * Provide cryptic feedback from the Sorting Hat after every question, such as "That's interesting!" or "Really...!"
 
 * On initial page load, allow users to select their wizarding school. There are 11 to choose from, but we only have House information for a few so not every school choice wil lead a user to a Sorting Hat-like experience. See: https://www.pottermore.com/collection/wizarding-schools
+
+## Pushing a vue-cli webpack-simple project to Heroku
+
+1. Remove the /dist directory from your .gitignore file.
+
+2. From the main directory of your project:
+
+    $ npm run build
+
+3. Install an Express server, configure index.js, and create a Procfile as usual.
+
+4. Push committed code to Heroku as usual.

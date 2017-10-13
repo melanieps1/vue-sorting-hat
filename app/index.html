@@ -13,14 +13,14 @@
 		<div class="instructions">
 			<h1>Welcome to Hogwarts!</h1>
 				<p>
-						Before you take your seats in the Great Hall, you will be sorted into your houses.  While you are here, your house will be like your family.  The four houses are called <label v-for="house in Houses"> {{ house.name }} </label>.<br><br>
+						Before you take your seats in the Great Hall, you will be sorted into your houses.  While you are here, your house will be like your family.<br><br>
 
 						Each house has its own noble history and each has produced outstanding witches and wizards.  When you are ready, click on the Sorting Hat and it will put you into your new house.  Good luck to all.
 					</p>
 
 					<!-- TODO: Make this work after localStorage is implemented -->
 					<button class="colorDark">
-						<p class="buttonLabel">RESET HOUSE</p>
+						<p class="buttonLabel" v-on:click="resetHouse">RESET HOUSE</p>
 					</button>
 
 		</div>
@@ -29,7 +29,12 @@
 
 			<img class="hat" src="./images/sorting-hat.png" width="450px" v-on:click="sortMe()">
 
-			<div class="results">
+			<div class="intro" v-if="clicks < 1">
+				<p>Click me to find out your new Hogwarts house!</p>
+				<img src="./images/hogwarts.png" height="100">
+			</div>
+
+			<div class="results" v-show="clicks > 0">
 				<p is="sortingHatMessage"
 					v-bind:name="Houses[index].name"
 					v-bind:image="Houses[index].image"

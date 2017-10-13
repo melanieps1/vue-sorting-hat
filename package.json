@@ -1,0 +1,27 @@
+{
+  "name": "vue-sorting-hat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melanieps1/vue-sorting-hat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melanieps1/vue-sorting-hat/issues"
+  },
+  "homepage": "https://github.com/melanieps1/vue-sorting-hat#readme"
+}

@@ -10,10 +10,11 @@
 
 		<div class="instructions">
 			<h1>Welcome to Hogwarts!</h1>
-			<p>This is where you will be sorted into one of the four school houses: 
-				<!-- TO DO: Fix comma styling to now show after last house -->
-				<label v-for="house in Houses">{{ house.name }}, </label>
-				<br>When you are ready, click on the Sorting Hat and it will put you into your new house.  Good luck to all.</p>
+				<p>
+						Before you take your seats in the Great Hall, you will be sorted into your houses.  While you are here, your house will be like your family.  The four houses are called <label v-for="house in Houses"> {{ house.name }}, </label>.<br><br>
+
+						Each house has its own noble history and each has produced outstanding witches and wizards.  When you are ready, click on the Sorting Hat and it will put you into your new house.  Good luck to all.
+					</p>
 		</div>
 
 		<div class="sortingSection">
@@ -22,8 +23,8 @@
 
 			<div class="results">
 				<p is="sortingHatMessage"
-					v-bind:name="house.name"
-					v-for="house in Houses">
+					v-bind:name="Houses[index].name"
+					v-bind:description="Houses[index].description">
 				</p>
 			</div>
 			

@@ -1,4 +1,4 @@
-Vue.component('selectedHouse', {
+Vue.component('sortingHatMessage', {
 
 	template: '<p>I know... <strong>{{ name }}</strong>!</p>',
 
@@ -12,9 +12,8 @@ var demo = new Vue({
 
 	data: {
 
-		sorted: false,
-		index: 0,
-
+		selectedHouse: '',
+		
 		'Houses': [
 
 	    {
@@ -44,9 +43,13 @@ var demo = new Vue({
 
 	methods: {
 
-		sortMe: function() {
-			alert('I am think of where to sort you...')
-			// this.sorted = !this.sorted;
+		sortMe: function(index) {
+			this.randomize();
+		},
+
+		randomize: function() {
+			var index = Math.round(Math.random() * (4 - 1) + 1);
+			console.log("Index: ", index);
 		}
 
 	}

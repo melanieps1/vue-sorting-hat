@@ -18,14 +18,12 @@
 
 		<div class="sortingSection">
 
-			<img class="hat" src="./images/sorting-hat.png" width="450px" v-on:click="sortMe()" v-bind:class="sorted">
+			<img class="hat" src="./images/sorting-hat.png" width="450px" v-on:click="sortMe()">
 
-			<div class="sorting">
-				<p 
-					is="selectedHouse"
+			<div class="results">
+				<p is="sortingHatMessage"
 					v-bind:name="house.name"
-					v-for="house in Houses"
-					class="sorted">
+					v-for="house in Houses">
 				</p>
 			</div>
 			

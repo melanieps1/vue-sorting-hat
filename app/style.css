@@ -1,0 +1,45 @@
+[v-cloak] {
+	display: none;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 24px 40px;
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+/*@font-face {
+	font-family: 'HarryP';
+	src: url('./fonts/HARRYP__.TTF');
+}*/
+
+#main {
+	text-align: center;
+}
+
+#sortingSection {
+	padding-top: 24px;
+	text-align: center;
+	width: 100%;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.hat {
+	cursor: pointer;
+}
+
+.sorted {
+	/*display: none;*/
+}

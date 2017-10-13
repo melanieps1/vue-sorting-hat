@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Sorting Hat</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id="main" v-cloak>
+
+		<div class="instructions">
+			<h1>Welcome to Hogwarts!</h1>
+			<p>This is where you will be sorted into one of our four school houses: 
+				<!-- TO DO: Fix comma styling to now show after last house -->
+				<label v-for="house in Houses">{{ house.name }}, </label>
+				<br>When it is your turn, click on the Sorting Hat and it will put you into your new house.  Good luck to all.</p>
+		</div>
+
+	<div class="sortingSection">
+
+		<img class="hat" src="./images/sorting-hat.png" width="450px" v-on:click="sortMe">
+
+		<div class="sorted" v-for="house in Houses">
+			I know... {{ house.name }}!
+			<button>Try Again</button>
+		</div>
+		
+	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>

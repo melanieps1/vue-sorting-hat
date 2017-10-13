@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>Vue Sorting Hat</title>
+
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700" rel="stylesheet">
 </head>
 <body>
 
@@ -11,10 +13,16 @@
 		<div class="instructions">
 			<h1>Welcome to Hogwarts!</h1>
 				<p>
-						Before you take your seats in the Great Hall, you will be sorted into your houses.  While you are here, your house will be like your family.  The four houses are called <label v-for="house in Houses"> {{ house.name }}, </label>.<br><br>
+						Before you take your seats in the Great Hall, you will be sorted into your houses.  While you are here, your house will be like your family.  The four houses are called <label v-for="house in Houses"> {{ house.name }} </label>.<br><br>
 
 						Each house has its own noble history and each has produced outstanding witches and wizards.  When you are ready, click on the Sorting Hat and it will put you into your new house.  Good luck to all.
 					</p>
+
+					<!-- TODO: Make this work after localStorage is implemented -->
+					<button class="colorDark">
+						<p class="buttonLabel">RESET HOUSE</p>
+					</button>
+
 		</div>
 
 		<div class="sortingSection">
@@ -24,6 +32,7 @@
 			<div class="results">
 				<p is="sortingHatMessage"
 					v-bind:name="Houses[index].name"
+					v-bind:image="Houses[index].image"
 					v-bind:description="Houses[index].description">
 				</p>
 			</div>

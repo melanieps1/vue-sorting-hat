@@ -3,39 +3,77 @@
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	/*background-image: url("images/parchment.jpg");*/
+	background-color: #fffdee;
+	font-family: 'Crimson Text', serif;
 	margin: 24px 40px;
 	padding: 0;
 }
 
 h1 {
+	font-size: 36px;
 	text-align: center;
 }
 
 p {
+	font-size: 18px;
 	text-align: center;
 }
-
-/*@font-face {
-	font-family: 'HarryP';
-	src: url('./fonts/HARRYP__.TTF');
-}*/
 
 #main {
 	text-align: center;
 }
 
-#sortingSection {
-	padding-top: 24px;
-	text-align: center;
-	width: 100%;
+.instructions {
+	float: left;
+	padding-right: 12px;
+	width: 40%;
 }
 
-ul {
-	list-style-type: none;
-	padding: 0;
+.sortingSection {
+	float: right;
+	padding-left: 12px;
+	text-align: center;
+	width: 48%;
 }
 
 .hat {
+	transition: all .2s ease-in-out;
+	width: 65%;
+}
+
+.hat:hover {
 	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.result {
+	font-size: 24px;
+	margin: 12px;
+}
+
+.twoTonedButton {
+	margin: auto;
+	width: 172px;
+}
+
+.colorDark {
+	background-color: #8d0000;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	color: white;
+	cursor: pointer;
+	font-family: 'Crimson Text', serif;
+	font-size: 16px;
+	font-weight: regular;
+	margin-top: 24px;
+	outline: none;
+	padding: 8px 16px;
+	text-align: center;
+	width: 150px;
+}
+
+.buttonLabel {
+	margin: 0;
 }

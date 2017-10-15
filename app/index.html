@@ -27,14 +27,18 @@
 
 		<div class="sortingSection">
 
-			<img class="hat" src="./images/sorting-hat.png" v-on:click="sortMe()">
+			<img class="hat" src="./images/sorting-hat.png" v-on:click="delayedSort()">
 
 			<div class="intro" v-if="clicks === 0">
 				<p>Click the Sorting Hat to find out your new Hogwarts house!</p>
 				<img src="./images/hogwarts.png" height="100">
 			</div>
 
-			<div class="results" v-show="clicks > 0">
+			<div v-else-if="clicks > 0 && index === -1">
+				<p>Difficult... very difficult...</p>
+			</div>
+
+			<div class="results" v-else-if="index > -1">
 				<p is="sortingHatMessage"
 					v-bind:name="Houses[index].name"
 					v-bind:image="Houses[index].image"

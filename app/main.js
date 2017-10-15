@@ -83,7 +83,7 @@ var demo = new Vue({
   //   },
 
   	resetHouse: function() {
-  		location.reload();
+  		this.clicks = 0;
   	}
 
 	}

@@ -18,7 +18,6 @@
 						Each house has its own noble history and each has produced outstanding witches and wizards.  When you are ready, click on the Sorting Hat and it will put you into your new house.  Good luck to all.
 					</p>
 
-					<!-- TODO: Make this work after localStorage is implemented -->
 					<button class="colorDark">
 						<p class="buttonLabel" v-on:click="resetHouse">RESET HOUSE</p>
 					</button>
@@ -27,14 +26,18 @@
 
 		<div class="sortingSection">
 
-			<img class="hat" src="./images/sorting-hat.png" width="450px" v-on:click="sortMe()">
+			<img class="hat" src="./images/sorting-hat.png" v-on:click="delayedSort()">
 
-			<div class="intro" v-if="clicks < 1">
-				<p>Click me to find out your new Hogwarts house!</p>
+			<div class="intro" v-if="clicks === 0">
+				<p>Click the Sorting Hat to find out your new Hogwarts house!</p>
 				<img src="./images/hogwarts.png" height="100">
 			</div>
 
-			<div class="results" v-show="clicks > 0">
+			<div v-if="clicks > 0 && index === ''">
+				<p>Difficult... very difficult...</p>
+			</div>
+
+			<div class="results" v-if="index !== ''">
 				<p is="sortingHatMessage"
 					v-bind:name="Houses[index].name"
 					v-bind:image="Houses[index].image"

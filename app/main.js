@@ -16,10 +16,8 @@ var demo = new Vue({
 
 	data: {
 
-		index: -1,
+		index: '',
 		clicks: 0,
-		// sorted: false,
-		// houseData: [],
 		
 		'Houses': [
 
@@ -58,8 +56,6 @@ var demo = new Vue({
 
 		sortMe: function() {
 			setTimeout(function() {
-				// this.clicks === 1;
-				// 	console.log("clicks again:", this.clicks);
 				this.index = Math.round(Math.random() * (4 - 1));
 					console.log("Index: ", this.index);
 			}, 2000);
@@ -67,6 +63,7 @@ var demo = new Vue({
 
   	resetHouse: function() {
   		this.clicks = 0;
+  		this.index = '';
   	}
 
 	}

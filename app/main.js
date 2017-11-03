@@ -18,8 +18,6 @@ var demo = new Vue({
 
 		index: 0,
 		clicks: 0,
-		// houseData: [],
-		// nextIdSeeds: 5,
 		
 		'Houses': [
 
@@ -48,14 +46,6 @@ var demo = new Vue({
 
 	},
 
-	// computed: {
-
-	// 	beforeMount: function() {
- //    	this.loadHouseData();    
- //  	},
-
-	// },
-
 	methods: {
 
 		sortMe: function() {
@@ -63,24 +53,6 @@ var demo = new Vue({
 			this.clicks++;
 			// console.log("Index: ", this.index);
 		},
-
-		// loadHouseData: function() {
-
-  //     this.nextId = localStorage.getItem('nextId');
-  //     this.houseData = JSON.parse(localStorage.getItem('houseData'));
-  //     if (!this.houseData) {
-  //       this.houseData = this.Houses;
-  //       this.nextId = this.nextIdSeeds;
-  //     }
-
-  //   },
-
-  //   saveHouseData: function() {
-
-  //     localStorage.setItem('houseData', JSON.stringify(this.houseData));
-  //     localStorage.setItem('nextId', this.nextId);
-
-  //   },
 
   	resetHouse: function() {
   		location.reload();

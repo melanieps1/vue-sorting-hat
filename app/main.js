@@ -16,7 +16,7 @@ var demo = new Vue({
 
 	data: {
 
-		index: 0,
+		index: '',
 		clicks: 0,
 		
 		'Houses': [
@@ -48,14 +48,23 @@ var demo = new Vue({
 
 	methods: {
 
+		delayedSort: function() {
+			this.index = '';
+			this.clicks++;
+			// console.log("Clicks: ", this.clicks);
+			var max = 5000;
+			var min = 1000;
+			setTimeout(this.sortMe, Math.floor(Math.random() * (max - min + 1) + min));
+		},
+
 		sortMe: function() {
 			this.index = Math.round(Math.random() * (4 - 1));
-			this.clicks++;
-			// console.log("Index: ", this.index);
+				// console.log("Index: ", this.index);
 		},
 
   	resetHouse: function() {
-  		location.reload();
+  		this.clicks = 0;
+  		this.index = '';
   	}
 
 	}

@@ -49,9 +49,12 @@ var demo = new Vue({
 	methods: {
 
 		delayedSort: function() {
+			this.index = '';
 			this.clicks++;
-				console.log("Clicks: ", this.clicks);
-			setTimeout(this.sortMe, 2000);
+			console.log("Clicks: ", this.clicks);
+			var max = 5000;
+			var min = 1000;
+			setTimeout(this.sortMe, Math.floor(Math.random() * (max - min + 1) + min));
 		},
 
 		// sortMe: function() {

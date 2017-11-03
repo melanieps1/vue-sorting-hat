@@ -50,15 +50,20 @@ var demo = new Vue({
 
 		delayedSort: function() {
 			this.clicks++;
-				console.log("clicks: ", this.clicks);
-			this.sortMe();
+				console.log("Clicks: ", this.clicks);
+			setTimeout(this.sortMe, 2000);
 		},
 
+		// sortMe: function() {
+		// 	setTimeout(function() {
+		// 		this.index = Math.round(Math.random() * (4 - 1));
+		// 			console.log("Index: ", this.index);
+		// 	}, 2000);
+		// },
+
 		sortMe: function() {
-			setTimeout(function() {
-				this.index = Math.round(Math.random() * (4 - 1));
-					console.log("Index: ", this.index);
-			}, 2000);
+			this.index = Math.round(Math.random() * (4 - 1));
+				console.log("Index: ", this.index);
 		},
 
   	resetHouse: function() {
